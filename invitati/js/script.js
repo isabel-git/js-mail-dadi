@@ -30,7 +30,7 @@ bvai.addEventListener("click",
       risultato = "benvenuto, sei stato invitato alla festa"
 
     } else {
-      risultato = "mi disp, non ci sei"
+      risultato = "mi dispiace, non ci sei stato invitato"
     }
     console.log(risultato);
 
