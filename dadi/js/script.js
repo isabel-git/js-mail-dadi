@@ -6,7 +6,6 @@ var nome = document.getElementById("username");
 var dadUt;
 var dadPc;
 var risultato = "hai visnto";
-console.log("risultato utente ",risultato);;
 
 // bottone per lanciare i dadi
 bstart.addEventListener("click",
@@ -29,7 +28,7 @@ bstart.addEventListener("click",
     } else {
       risultato = " hai pareggiato, ritenta";
     }
-    console.log("risultato utente ",risultato);
+    console.log("risultato utente: ",risultato);
 
     // OUTPUT
     document.getElementById("outputDado").innerHTML = nome.value + ": " + dadUt + "<br>" + "pc: " + dadPc;
