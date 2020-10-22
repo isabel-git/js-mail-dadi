@@ -5,7 +5,8 @@ var bstart = document.getElementById("start");
 var nome = document.getElementById("username");
 var dadUt;
 var dadPc;
-var risultato;
+var risultato = "hai visnto";
+console.log("risultato utente ",risultato);;
 
 // bottone per lanciare i dadi
 bstart.addEventListener("click",
@@ -20,17 +21,18 @@ bstart.addEventListener("click",
 
     // condizioni vincita
     if (dadUt < dadPc) {
-      risultato = "hai perso";
+      risultato = " mi dispiace hai perso :(";
 
     } else if (dadUt > dadPc) {
-      risultato = "hai vinto";
+      risultato = " congratulazioni hai vinto :D";
 
     } else {
-      risultato = "pareggio";
+      risultato = " hai pareggiato, ritenta";
     }
     console.log("risultato utente ",risultato);
 
     // OUTPUT
-
+    document.getElementById("outputDado").innerHTML = nome.value + ": " + dadUt + "<br>" + "pc: " + dadPc;
+    document.getElementById("output").innerHTML = nome.value + "," + risultato;
 
 } );
