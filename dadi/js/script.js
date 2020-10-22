@@ -5,7 +5,7 @@ var bstart = document.getElementById("start");
 var nome = document.getElementById("username");
 var dadUt;
 var dadPc;
-var risultato = "hai visnto";
+var risultato;
 
 // bottone per lanciare i dadi
 bstart.addEventListener("click",
