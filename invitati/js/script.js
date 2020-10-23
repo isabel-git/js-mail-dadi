@@ -4,7 +4,7 @@
 
 var inputEmail = document.getElementById("email");
 var bvai = document.getElementById("vai");
-var outputEmail = "";
+var outputLista = ""; // permette di visualizzare gli item-list del arrey (le emai)
 var confronto = "false";
 var risultato;
 
@@ -15,8 +15,10 @@ var invitati = ["max@gmail.com", "pippo@gmail.com", "john@gmail.com", "doe@gmail
 bvai.addEventListener("click",
   function() {
     // ciclo per traversare le email
+    // il ciclo serve per fare una scansione allinterno degli arrey
     for (var i = 0; i < invitati.length; i++) {
-      outputEmail = outputEmail + invitati[i];
+      outputLista = outputLista + invitati[i] + "<br>"; // quando richiamo outputlista salvo i valori precedenti al posto di sovrascriverli e aggiungendo invitati[i], il valore successivo lo sommo a quello precedente.
+
 
       // condizioni confronto
       if (inputEmail.value === invitati[i]) {
@@ -30,10 +32,10 @@ bvai.addEventListener("click",
       risultato = "benvenuto, sei stato invitato alla festa"
 
     } else {
-      risultato = "mi dispiace, non ci sei stato invitato"
+      risultato = "mi dispiace, non sei stato invitato"
     }
     console.log(risultato);
 
   // OUTPUT
-  document.getElementById("outputMex").innerHTML = risultato;
+  document.getElementById("outputMex").innerHTML = risultato + "," + " ecco la lista degli invitati:" + "<br>" + outputLista;
 } );
