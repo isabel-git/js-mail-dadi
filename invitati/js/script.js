@@ -17,8 +17,7 @@ bvai.addEventListener("click",
     // ciclo per traversare le email
     // il ciclo serve per fare una scansione allinterno degli arrey
     for (var i = 0; i < invitati.length; i++) {
-      outputLista = outputLista + invitati[i] + "<br>"; // quando richiamo outputlista salvo i valori precedenti al posto di sovrascriverli e aggiungendo invitati[i], il valore successivo lo sommo a quello precedente.
-
+      outputLista = outputLista + "<li>" + invitati[i] + "</li>"; // quando richiamo outputlista salvo i valori precedenti al posto di sovrascriverli e aggiungendo invitati[i], il valore successivo lo sommo a quello precedente.
 
       // condizioni confronto
       if (inputEmail.value === invitati[i]) {
@@ -37,5 +36,5 @@ bvai.addEventListener("click",
     console.log(risultato);
 
   // OUTPUT
-  document.getElementById("outputMex").innerHTML = risultato + "," + " ecco la lista degli invitati:" + "<br>" + outputLista;
+  document.getElementById("outputMex").innerHTML = risultato + "," + " ecco la lista degli invitati:" + outputLista;
 } );
